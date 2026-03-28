@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemoriesX | Creative Printing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.8;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 26px;
+    margin: 15px 0;
+    color: #00ffd5;
+}
+
+.save {
+    background: rgba(0,255,150,0.15);
+    border: 1px solid #00ffd5;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #00ffd5;
+}
+
+button {
+    background: #00ffd5;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00c9a7;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MemoriesX</h1>
+    <p>Premium Creative Printing Services</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+    <h2>50 Licenses</h2>
+    <div class="price">₹175 / license</div>
+    <div class="price">Total: ₹8750</div>
+    <div class="save">No discount</div>
+    <button onclick="orderNow(50,175)">Buy Now</button>
+</div>
+
+<div class="card">
+    <h2>150 Licenses</h2>
+    <div class="price">₹150 / license</div>
+    <div class="price">Total: ₹22500</div>
+    <div class="save">You Save ₹3750</div>
+    <button onclick="orderNow(150,150)">Buy Now</button>
+</div>
+
+<div class="card">
+    <h2>250 Licenses</h2>
+    <div class="price">₹125 / license</div>
+    <div class="price">Total: ₹31250</div>
+    <div class="save">You Save ₹12500</div>
+    <button onclick="orderNow(250,125)">Buy Now</button>
+</div>
+
+<div class="card">
+    <h2>500+ Licenses</h2>
+    <div class="price">₹100 / license</div>
+    <div class="price">Total: ₹50000+</div>
+    <div class="save">You Save ₹37500+</div>
+    <button onclick="orderNow(500,100)">Buy Now</button>
+</div>
+
+</div>
+
+<section style="padding:40px; max-width:900px; margin:auto;">
+    <h2 style="text-align:center; margin-bottom:20px;">Compare Plans</h2>
+    <table style="width:100%; border-collapse: collapse; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 12px; overflow:hidden;">
+        <tr style="background: rgba(0,255,213,0.2);">
+            <th style="padding:12px;">Plan</th>
+            <th>Price / License</th>
+            <th>Total Cost</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td style="padding:12px;">50 Licenses</td>
+            <td>₹175</td>
+            <td>₹8750</td>
+            <td>No discount</td>
+        </tr>
+        <tr>
+            <td style="padding:12px;">150 Licenses</td>
+            <td>₹150</td>
+            <td>₹22500</td>
+            <td>₹3750</td>
+        </tr>
+        <tr>
+            <td style="padding:12px;">250 Licenses</td>
+            <td>₹125</td>
+            <td>₹31250</td>
+            <td>₹12500</td>
+        </tr>
+        <tr>
+            <td style="padding:12px;">500+ Licenses</td>
+            <td>₹100</td>
+            <td>₹50000+</td>
+            <td>₹37500+</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    © 2026 MemoriesX | All Rights Reserved
+</footer>
+
+<script>
+function orderNow(qty, price) {
+    let total = qty * price;
+    let message = `Hi, I want to buy ${qty} licenses at ₹${price} per license. Total cost = ₹${total}.`;
+    let phone = "9036351517"; // replace with your number
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+} licenses at ₹${price} per license.`;
+    let phone = "9036351517"; // replace with your number
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
